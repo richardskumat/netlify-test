@@ -1,5 +1,5 @@
 Title: Pelican Everywhere
-Date: 2019-06-26
+Date: 2019-06-26 19:05
 Category: GitLab
 Tags: pelican, gitlab
 Slug: pelican-everywhere

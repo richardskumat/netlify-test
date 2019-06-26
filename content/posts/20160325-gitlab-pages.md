@@ -1,5 +1,5 @@
 Title: Pelican on GitLab Pages!
-Date: 2016-03-25
+Date: 2016-03-25 03:04
 Category: GitLab
 Tags: pelican, gitlab
 Slug: pelican-on-gitlab-pages
