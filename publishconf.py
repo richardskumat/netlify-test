@@ -10,6 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+# setting site URLS to / seems to have fixed my CSS errors on netlify pages
 SITEURL = '/'
 RELATIVE_URLS = False
 

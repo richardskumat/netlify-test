@@ -14,6 +14,7 @@ ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
 endif
 
+# setting relative URLS to 1 seems to have fixed my CSS errors on gitlab pages
 RELATIVE ?= 1
 ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
