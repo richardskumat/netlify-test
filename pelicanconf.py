@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Richard'
-SITENAME = 'Example Pelican website using GitLab Pages!'
+SITENAME = 'Whatever pelican site'
 SITEURL = ''
 
 PATH = 'content'
