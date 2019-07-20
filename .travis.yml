@@ -4,7 +4,7 @@
 # build using Python 3.6
 language: python
 python:
-  - 3.7
+  - 3.6
 # Cache Dependencies
 cache: pip
 # we need two Linux packages for the optimize_images plugin
