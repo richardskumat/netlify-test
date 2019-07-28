@@ -9,6 +9,38 @@ documentation https://docs.gitlab.com/ce/user/project/pages/.
 
 ---
 
+My own links for testing pelican with gitlab/github/travis/netlify:
+
+Gitlab.com:
+
+https://gitlab.com/richardskumat/netlify-test/
+
+Gitlab pages:
+
+https://richardskumat.gitlab.io/netlify-test
+
+Github.com:
+
+https://github.com/richardskumat/netlify-test
+
+Github pages:
+
+https://richardskumat.github.io/netlify-test/
+
+http://netlify-test-gh-pages.richardskumat.com/
+
+Travisci:
+
+https://travis-ci.org/richardskumat/netlify-test
+
+Netlify test:
+
+https://peaceful-shannon-9d531a.netlify.com/
+
+https://netlify-test.richardskumat.com/
+
+---
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -27,15 +59,31 @@ This project's static Pages are built by [GitLab CI][ci], following the steps
 defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
 
 ```
-image: python:2.7-alpine
+image: python:3.7-stretch
 
 pages:
+  stage: deploy
   script:
+  - apt-get update && apt-get install -y make
   - pip install -r requirements.txt
-  - pelican -s publishconf.py
+  - make publish
   artifacts:
     paths:
     - public/
+  only:
+  - master
+
+test:
+  stage: test
+  script:
+  - apt-get update && apt-get install -y make
+  - pip install -r requirements.txt
+  - make publish
+  only:
+  - branches
+  except:
+  - master
+
 ```
 
 ## Building locally
