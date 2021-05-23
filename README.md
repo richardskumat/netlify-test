@@ -29,10 +29,6 @@ https://richardskumat.github.io/netlify-test/
 
 http://netlify-test-gh-pages.richardskumat.com/
 
-Travisci:
-
-https://travis-ci.org/richardskumat/netlify-test
-
 Netlify test:
 
 https://peaceful-shannon-9d531a.netlify.com/
