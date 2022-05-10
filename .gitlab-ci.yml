@@ -1,10 +1,8 @@
-image: python:3.7-stretch
+image: qwe1/docker-pelican
 
 pages:
   stage: deploy
   script:
-  - apt-get update && apt-get install -y make
-  - pip install -r requirements.txt
   - make publish
   artifacts:
     paths:
@@ -15,8 +13,6 @@ pages:
 test:
   stage: test
   script:
-  - apt-get update && apt-get install -y make
-  - pip install -r requirements.txt
   - make publish
   only:
   - branches

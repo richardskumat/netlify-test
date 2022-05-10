@@ -52,35 +52,7 @@ https://netlify-test.richardskumat.com/
 ## GitLab CI
 
 This project's static Pages are built by [GitLab CI][ci], following the steps
-defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
-
-```
-image: python:3.7-stretch
-
-pages:
-  stage: deploy
-  script:
-  - apt-get update && apt-get install -y make
-  - pip install -r requirements.txt
-  - make publish
-  artifacts:
-    paths:
-    - public/
-  only:
-  - master
-
-test:
-  stage: test
-  script:
-  - apt-get update && apt-get install -y make
-  - pip install -r requirements.txt
-  - make publish
-  only:
-  - branches
-  except:
-  - master
-
-```
+defined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
 
 ## Building locally
 
